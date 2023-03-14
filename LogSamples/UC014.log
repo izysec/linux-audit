@@ -1,0 +1,4 @@
+type=PROCTITLE msg=audit(1675721431.388:35406): proctitle=636174002F6574632F7375646F657273
+type=PATH msg=audit(1675721431.388:35406): item=0 name="/etc/sudoers" inode=130779 dev=08:01 mode=0100440 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=CWD msg=audit(1675721431.388:35406): cwd="/etc/audit/rules.d"
+type=SYSCALL msg=audit(1675721431.388:35406): arch=c000003e syscall=2 success=yes exit=3 a0=7ffe091ff88b a1=0 a2=20000 a3=69d items=1 ppid=32386 pid=34185 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts1 ses=4294967295 comm="cat" exe="/bin/cat" key="file_access"

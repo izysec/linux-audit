@@ -1,0 +1,6 @@
+type=PROCTITLE msg=audit(02/01/2023 04:39:34.901:30777) : proctitle=python badscript.py 
+type=PATH msg=audit(02/01/2023 04:39:34.901:30777) : item=1 name=/lib64/ld-linux-x86-64.so.2 inode=926913 dev=08:01 mode=file,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 
+type=PATH msg=audit(02/01/2023 04:39:34.901:30777) : item=0 name=/usr/bin/python inode=659272 dev=08:01 mode=file,755 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 
+type=CWD msg=audit(02/01/2023 04:39:34.901:30777) : cwd=/home/izy/Documents/testing 
+type=EXECVE msg=audit(02/01/2023 04:39:34.901:30777) : argc=2 a0=python a1=badscript.py 
+type=SYSCALL msg=audit(02/01/2023 04:39:34.901:30777) : arch=x86_64 syscall=execve success=yes exit=0 a0=0x11ba5a8 a1=0x13f78c8 a2=0x10ab008 a3=0x598 items=2 ppid=8720 pid=24107 auid=unset uid=izy gid=izy euid=izy suid=izy fsuid=izy egid=izy sgid=izy fsgid=izy tty=pts19 ses=unset comm=python exe=/usr/bin/python2.7 key=T1059_1

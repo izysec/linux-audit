@@ -1,0 +1,11 @@
+type=PROCTITLE msg=audit(02/06/2023 14:39:30.702:35495) : proctitle=ssh izy@127.0.0.1 
+type=SOCKADDR msg=audit(02/06/2023 14:39:30.702:35495) : saddr=inet host:127.0.0.1 serv:22 
+type=SYSCALL msg=audit(02/06/2023 14:39:30.702:35495) : arch=x86_64 syscall=connect success=yes exit=0 a0=0x3 a1=0x55931f5a1670 a2=0x10 a3=0x7ffd614985b0 items=0 ppid=8720 pid=34584 auid=unset uid=izy gid=izy euid=izy suid=izy fsuid=izy egid=izy sgid=izy fsgid=izy tty=pts19 ses=unset comm=ssh exe=/usr/bin/ssh key=network_conn 
+----
+type=PROCTITLE msg=audit(02/06/2023 14:39:30.706:35496) : proctitle=/usr/sbin/sshd -D -R 
+type=SOCKADDR msg=audit(02/06/2023 14:39:30.706:35496) : saddr=unknown family(0) 
+type=SYSCALL msg=audit(02/06/2023 14:39:30.706:35496) : arch=x86_64 syscall=connect success=yes exit=0 a0=0x3 a1=0x7ffdd8f90b70 a2=0x10 a3=0x10 items=0 ppid=989 pid=34585 auid=unset uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=(none) ses=unset comm=sshd exe=/usr/sbin/sshd key=network_conn 
+----
+type=PROCTITLE msg=audit(02/06/2023 14:39:30.706:35497) : proctitle=/usr/sbin/sshd -D -R 
+type=SOCKADDR msg=audit(02/06/2023 14:39:30.706:35497) : saddr=inet host:0.0.0.0 serv:22 
+type=SYSCALL msg=audit(02/06/2023 14:39:30.706:35497) : arch=x86_64 syscall=connect success=yes exit=0 a0=0x3 a1=0x55df9a262770 a2=0x10 a3=0x10 items=0 ppid=989 pid=34585 auid=unset uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=(none) ses=unset comm=sshd exe=/usr/sbin/sshd key=network_conn

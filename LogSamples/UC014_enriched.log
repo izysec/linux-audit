@@ -1,0 +1,4 @@
+type=PROCTITLE msg=audit(02/06/2023 14:10:31.388:35406) : proctitle=cat /etc/sudoers 
+type=PATH msg=audit(02/06/2023 14:10:31.388:35406) : item=0 name=/etc/sudoers inode=130779 dev=08:01 mode=file,440 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 
+type=CWD msg=audit(02/06/2023 14:10:31.388:35406) : cwd=/etc/audit/rules.d 
+type=SYSCALL msg=audit(02/06/2023 14:10:31.388:35406) : arch=x86_64 syscall=open success=yes exit=3 a0=0x7ffe091ff88b a1=O_RDONLY a2=0x20000 a3=0x69d items=1 ppid=32386 pid=34185 auid=unset uid=root gid=root euid=root suid=root fsuid=root egid=root sgid=root fsgid=root tty=pts1 ses=unset comm=cat exe=/bin/cat key=file_access 
