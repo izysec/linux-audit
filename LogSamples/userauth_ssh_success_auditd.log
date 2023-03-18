@@ -1,1 +1,0 @@
-type=USER_AUTH msg=audit(1660250602.499:18464): pid=25576 uid=0 auid=4294967295 ses=4294967295 msg='op=PAM:authentication acct="izy" exe="/usr/sbin/sshd" hostname=192.168.226.1 addr=192.168.226.1 terminal=ssh res=success'

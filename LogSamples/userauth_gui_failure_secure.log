@@ -1,2 +1,0 @@
-Aug 13 08:03:15 ubuntu unix_chkpwd[33354]: password check failed for user (izy)
-Aug 13 08:03:15 ubuntu compiz: pam_unix(unity:auth): authentication failure; logname= uid=1000 euid=1000 tty= ruser= rhost=  user=izy

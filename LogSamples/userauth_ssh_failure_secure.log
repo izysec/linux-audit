@@ -1,2 +1,0 @@
-Aug 13 07:36:30 ubuntu sshd[33197]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.226.1  user=izy
-Aug 13 07:36:32 ubuntu sshd[33197]: Failed password for izy from 192.168.226.1 port 57018 ssh2

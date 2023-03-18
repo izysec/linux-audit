@@ -1,5 +1,0 @@
-type=PROCTITLE msg=audit(1675547445.149:34261): proctitle=746F756368004372656174656446696C652E747874
-type=PATH msg=audit(1675547445.149:34261): item=1 name="CreatedFile.txt" inode=806187 dev=08:01 mode=0100664 ouid=1000 ogid=1000 rdev=00:00 nametype=CREATE cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
-type=PATH msg=audit(1675547445.149:34261): item=0 name="/home/izy/Documents/testing" inode=806192 dev=08:01 mode=040775 ouid=1000 ogid=1000 rdev=00:00 nametype=PARENT cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
-type=CWD msg=audit(1675547445.149:34261): cwd="/home/izy/Documents/testing"
-type=SYSCALL msg=audit(1675547445.149:34261): arch=c000003e syscall=2 success=yes exit=3 a0=7ffcbbf1c2f7 a1=941 a2=1b6 a3=69d items=2 ppid=8720 pid=30784 auid=4294967295 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts19 ses=4294967295 comm="touch" exe="/bin/touch" key="File_test"

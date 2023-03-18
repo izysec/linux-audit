@@ -1,4 +1,0 @@
-type=PROCTITLE msg=audit(02/06/2023 14:05:15.581:35402) : proctitle=cat /etc/sudoers 
-type=PATH msg=audit(02/06/2023 14:05:15.581:35402) : item=0 name=/etc/sudoers inode=130779 dev=08:01 mode=file,440 ouid=root ogid=root rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 
-type=CWD msg=audit(02/06/2023 14:05:15.581:35402) : cwd=/home/izy/Documents/testing 
-type=SYSCALL msg=audit(02/06/2023 14:05:15.581:35402) : arch=x86_64 syscall=open success=no exit=-13(Permission denied) a0=0x7ffc3994c306 a1=O_RDONLY a2=0x20000 a3=0x69d items=1 ppid=8720 pid=34133 auid=unset uid=izy gid=izy euid=izy suid=izy fsuid=izy egid=izy sgid=izy fsgid=izy tty=pts19 ses=unset comm=cat exe=/bin/cat key=file_access

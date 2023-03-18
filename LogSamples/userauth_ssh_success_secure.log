@@ -1,2 +1,0 @@
-Aug 11 14:08:01 ubuntu sshd[25811]: Accepted password for izy from 192.168.226.1 port 57206 ssh2
-Aug 11 14:08:01 ubuntu sshd[25811]: pam_unix(sshd:session): session opened for user izy by (uid=0)
