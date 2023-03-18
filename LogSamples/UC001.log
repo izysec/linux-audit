@@ -1,0 +1,6 @@
+type=PROCTITLE msg=audit(1675255174.901:30777): proctitle=707974686F6E006261647363726970742E7079
+type=PATH msg=audit(1675255174.901:30777): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=926913 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PATH msg=audit(1675255174.901:30777): item=0 name="/usr/bin/python" inode=659272 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=CWD msg=audit(1675255174.901:30777): cwd="/home/izy/Documents/testing"
+type=EXECVE msg=audit(1675255174.901:30777): argc=2 a0="python" a1="badscript.py"
+type=SYSCALL msg=audit(1675255174.901:30777): arch=c000003e syscall=59 success=yes exit=0 a0=11ba5a8 a1=13f78c8 a2=10ab008 a3=598 items=2 ppid=8720 pid=24107 auid=4294967295 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts19 ses=4294967295 comm="python" exe="/usr/bin/python2.7" key="T1059_1"

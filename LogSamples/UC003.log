@@ -1,0 +1,5 @@
+type=PROCTITLE msg=audit(1675716808.078:35067): proctitle="bash"
+type=PATH msg=audit(1675716808.078:35067): item=1 name="ModifyMe.txt" inode=806202 dev=08:01 mode=0100664 ouid=1000 ogid=1000 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PATH msg=audit(1675716808.078:35067): item=0 name="/home/izy/Documents/testing" inode=806192 dev=08:01 mode=040775 ouid=1000 ogid=1000 rdev=00:00 nametype=PARENT cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=CWD msg=audit(1675716808.078:35067): cwd="/home/izy/Documents/testing"
+type=SYSCALL msg=audit(1675716808.078:35067): arch=c000003e syscall=2 success=yes exit=3 a0=11d4368 a1=441 a2=1b6 a3=7ffe4fed1268 items=2 ppid=2477 pid=8720 auid=4294967295 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts19 ses=4294967295 comm="bash" exe="/bin/bash" key="File_test"

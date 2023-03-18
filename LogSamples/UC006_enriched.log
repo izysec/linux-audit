@@ -1,0 +1,79 @@
+type=PROCTITLE msg=audit(02/06/2023 13:26:53.802:35194) : proctitle=vim ModifyMe.txt 
+type=PATH msg=audit(02/06/2023 13:26:53.802:35194) : item=1 name=.ModifyMe.txt.swp inode=807372 dev=08:01 mode=file,600 ouid=izy ogid=izy rdev=00:00 nametype=CREATE cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 
+type=PATH msg=audit(02/06/2023 13:26:53.802:35194) : item=0 name=/home/izy/Documents/testing inode=806192 dev=08:01 mode=dir,775 ouid=izy ogid=izy rdev=00:00 nametype=PARENT cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 
+type=CWD msg=audit(02/06/2023 13:26:53.802:35194) : cwd=/home/izy/Documents/testing 
+type=SYSCALL msg=audit(02/06/2023 13:26:53.802:35194) : arch=x86_64 syscall=open success=yes exit=4 a0=0x55e523955500 a1=O_RDWR|O_CREAT|O_EXCL a2=0600 a3=0x0 items=2 ppid=8720 pid=33741 auid=unset uid=izy gid=izy euid=izy suid=izy fsuid=izy egid=izy sgid=izy fsgid=izy tty=pts19 ses=unset comm=vim exe=/usr/bin/vim.basic key=File_test
+type=PROCTITLE msg=audit(02/06/2023 13:26:53.806:35195) : proctitle=vim ModifyMe.txt 
+type=PATH msg=audit(02/06/2023 13:26:53.806:35195) : item=1 name=.ModifyMe.txt.swx inode=808111 dev=08:01 mode=file,600 ouid=izy ogid=izy rdev=00:00 nametype=CREATE cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 
+type=PATH msg=audit(02/06/2023 13:26:53.806:35195) : item=0 name=/home/izy/Documents/testing inode=806192 dev=08:01 mode=dir,775 ouid=izy ogid=izy rdev=00:00 nametype=PARENT cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 
+type=CWD msg=audit(02/06/2023 13:26:53.806:35195) : cwd=/home/izy/Documents/testing 
+type=SYSCALL msg=audit(02/06/2023 13:26:53.806:35195) : arch=x86_64 syscall=open success=yes exit=5 a0=0x55e523766180 a1=O_RDWR|O_CREAT|O_EXCL a2=0600 a3=0x0 items=2 ppid=8720 pid=33741 auid=unset uid=izy gid=izy euid=izy suid=izy fsuid=izy egid=izy sgid=izy fsgid=izy tty=pts19 ses=unset comm=vim exe=/usr/bin/vim.basic key=File_test 
+root@ubuntu:/etc/audit/rules.d# ausearch -i -a 35194 -k File_test
+type=PROCTITLE msg=audit(02/06/2023 13:26:53.810:35196) : proctitle=vim ModifyMe.txt 
+type=PATH msg=audit(02/06/2023 13:26:53.810:35196) : item=1 name=.ModifyMe.txt.swx inode=808111 dev=08:01 mode=file,600 ouid=izy ogid=izy rdev=00:00 nametype=DELETE cap_fp=none cap_fi=none cap_fe=0 cap_fver=0
+type=PATH msg=audit(02/06/2023 13:26:53.810:35196) : item=0 name=/home/izy/Documents/testing inode=806192 dev=08:01 mode=dir,775 ouid=izy ogid=izy rdev=00:00 nametype=PARENT cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 
+type=CWD msg=audit(02/06/2023 13:26:53.810:35196) : cwd=/home/izy/Documents/testing 
+type=SYSCALL msg=audit(02/06/2023 13:26:53.810:35196) : arch=x86_64 syscall=unlink success=yes exit=0 a0=0x55e523766180 a1=0x7ffc13d48a30 a2=0x1 a3=0x0 items=2 ppid=8720 pid=33741 auid=unset uid=izy gid=izy euid=izy suid=izy fsuid=izy egid=izy sgid=izy fsgid=izy tty=pts19 ses=unset comm=vim exe=/usr/bin/vim.basic key=File_test 
+root@ubuntu:/etc/audit/rules.d# ausearch -i -a 35195 -k File_test
+type=PROCTITLE msg=audit(02/06/2023 13:26:53.810:35197) : proctitle=vim ModifyMe.txt 
+type=PATH msg=audit(02/06/2023 13:26:53.810:35197) : item=1 name=.ModifyMe.txt.swp inode=807372 dev=08:01 mode=file,600 ouid=izy ogid=izy rdev=00:00 nametype=DELETE cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 
+type=PATH msg=audit(02/06/2023 13:26:53.810:35197) : item=0 name=/home/izy/Documents/testing inode=806192 dev=08:01 mode=dir,775 ouid=izy ogid=izy rdev=00:00 nametype=PARENT cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 
+type=CWD msg=audit(02/06/2023 13:26:53.810:35197) : cwd=/home/izy/Documents/testing 
+type=SYSCALL msg=audit(02/06/2023 13:26:53.810:35197) : arch=x86_64 syscall=unlink success=yes exit=0 a0=0x55e523955500 a1=0x1 a2=0x1 a3=0x0 items=2 ppid=8720 pid=33741 auid=unset uid=izy gid=izy euid=izy suid=izy fsuid=izy egid=izy sgid=izy fsgid=izy tty=pts19 ses=unset comm=vim exe=/usr/bin/vim.basic key=File_test 
+root@ubuntu:/etc/audit/rules.d# ausearch -i -a 35196 -k File_test
+type=PROCTITLE msg=audit(02/06/2023 13:26:53.814:35198) : proctitle=vim ModifyMe.txt 
+type=PATH msg=audit(02/06/2023 13:26:53.814:35198) : item=1 name=.ModifyMe.txt.swp inode=807372 dev=08:01 mode=file,600 ouid=izy ogid=izy rdev=00:00 nametype=CREATE cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 
+type=PATH msg=audit(02/06/2023 13:26:53.814:35198) : item=0 name=/home/izy/Documents/testing inode=806192 dev=08:01 mode=dir,775 ouid=izy ogid=izy rdev=00:00 nametype=PARENT cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 
+type=CWD msg=audit(02/06/2023 13:26:53.814:35198) : cwd=/home/izy/Documents/testing 
+type=SYSCALL msg=audit(02/06/2023 13:26:53.814:35198) : arch=x86_64 syscall=open success=yes exit=4 a0=0x55e523955500 a1=O_RDWR|O_CREAT|O_EXCL|O_NOFOLLOW a2=0600 a3=0x7f8af35b1b78 items=2 ppid=8720 pid=33741 auid=unset uid=izy gid=izy euid=izy suid=izy fsuid=izy egid=izy sgid=izy fsgid=izy tty=pts19 ses=unset comm=vim exe=/usr/bin/vim.basic key=File_test 
+type=PROCTITLE msg=audit(02/06/2023 13:26:53.814:35199) : proctitle=vim ModifyMe.txt 
+type=PATH msg=audit(02/06/2023 13:26:53.814:35199) : item=0 name=.ModifyMe.txt.swp inode=807372 dev=08:01 mode=file,600 ouid=izy ogid=izy rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 
+type=CWD msg=audit(02/06/2023 13:26:53.814:35199) : cwd=/home/izy/Documents/testing 
+type=SYSCALL msg=audit(02/06/2023 13:26:53.814:35199) : arch=x86_64 syscall=chmod success=yes exit=0 a0=0x55e523955500 a1=0644 a2=0x7ffc13d48cd0 a3=0x7ffc13d48d50 items=1 ppid=8720 pid=33741 auid=unset uid=izy gid=izy euid=izy suid=izy fsuid=izy egid=izy sgid=izy fsgid=izy tty=pts19 ses=unset comm=vim exe=/usr/bin/vim.basic key=File_test
+type=PROCTITLE msg=audit(02/06/2023 13:26:57.450:35200) : proctitle=vim ModifyMe.txt 
+type=PATH msg=audit(02/06/2023 13:26:57.450:35200) : item=1 name=4913 inode=808111 dev=08:01 mode=file,664 ouid=izy ogid=izy rdev=00:00 nametype=CREATE cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 
+type=PATH msg=audit(02/06/2023 13:26:57.450:35200) : item=0 name=/home/izy/Documents/testing inode=806192 dev=08:01 mode=dir,775 ouid=izy ogid=izy rdev=00:00 nametype=PARENT cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 
+type=CWD msg=audit(02/06/2023 13:26:57.450:35200) : cwd=/home/izy/Documents/testing 
+type=SYSCALL msg=audit(02/06/2023 13:26:57.450:35200) : arch=x86_64 syscall=open success=yes exit=3 a0=0x55e52375f210 a1=O_WRONLY|O_CREAT|O_EXCL|O_NOFOLLOW a2=0664 a3=0x0 items=2 ppid=8720 pid=33741 auid=unset uid=izy gid=izy euid=izy suid=izy fsuid=izy egid=izy sgid=izy fsgid=izy tty=pts19 ses=unset comm=vim exe=/usr/bin/vim.basic key=File_test 
+type=PROCTITLE msg=audit(02/06/2023 13:26:57.450:35201) : proctitle=vim ModifyMe.txt 
+type=PATH msg=audit(02/06/2023 13:26:57.450:35201) : item=0 name=(null) inode=808111 dev=08:01 mode=file,664 ouid=izy ogid=izy rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 
+type=SYSCALL msg=audit(02/06/2023 13:26:57.450:35201) : arch=x86_64 syscall=fchown success=yes exit=0 a0=0x3 a1=0x3e8 a2=0x3e8 a3=0x0 items=1 ppid=8720 pid=33741 auid=unset uid=izy gid=izy euid=izy suid=izy fsuid=izy egid=izy sgid=izy fsgid=izy tty=pts19 ses=unset comm=vim exe=/usr/bin/vim.basic key=File_test
+type=PROCTITLE msg=audit(02/06/2023 13:26:57.450:35202) : proctitle=vim ModifyMe.txt 
+type=PATH msg=audit(02/06/2023 13:26:57.450:35202) : item=1 name=4913 inode=808111 dev=08:01 mode=file,664 ouid=izy ogid=izy rdev=00:00 nametype=DELETE cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 
+type=PATH msg=audit(02/06/2023 13:26:57.450:35202) : item=0 name=/home/izy/Documents/testing inode=806192 dev=08:01 mode=dir,775 ouid=izy ogid=izy rdev=00:00 nametype=PARENT cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 
+type=CWD msg=audit(02/06/2023 13:26:57.450:35202) : cwd=/home/izy/Documents/testing 
+type=SYSCALL msg=audit(02/06/2023 13:26:57.450:35202) : arch=x86_64 syscall=unlink success=yes exit=0 a0=0x55e52375f210 a1=0x7ffc13d48690 a2=0x7ffc13d48690 a3=0x0 items=2 ppid=8720 pid=33741 auid=unset uid=izy gid=izy euid=izy suid=izy fsuid=izy egid=izy sgid=izy fsgid=izy tty=pts19 ses=unset comm=vim exe=/usr/bin/vim.basic key=File_test
+type=PROCTITLE msg=audit(02/06/2023 13:26:57.450:35203) : proctitle=vim ModifyMe.txt 
+type=PATH msg=audit(02/06/2023 13:26:57.450:35203) : item=0 name=/home/izy/Documents/testing inode=806192 dev=08:01 mode=dir,775 ouid=izy ogid=izy rdev=00:00 nametype=PARENT cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 
+type=CWD msg=audit(02/06/2023 13:26:57.450:35203) : cwd=/home/izy/Documents/testing 
+type=SYSCALL msg=audit(02/06/2023 13:26:57.450:35203) : arch=x86_64 syscall=unlink success=no exit=-2(No such file or directory) a0=0x55e523957700 a1=0x7ffc13d47380 a2=0xfffffffffffffeb8 a3=0x0 items=1 ppid=8720 pid=33741 auid=unset uid=izy gid=izy euid=izy suid=izy fsuid=izy egid=izy sgid=izy fsgid=izy tty=pts19 ses=unset comm=vim exe=/usr/bin/vim.basic key=File_test
+type=PROCTITLE msg=audit(02/06/2023 13:26:57.450:35204) : proctitle=vim ModifyMe.txt 
+type=PATH msg=audit(02/06/2023 13:26:57.450:35204) : item=3 name=ModifyMe.txt~ inode=806202 dev=08:01 mode=file,664 ouid=izy ogid=izy rdev=00:00 nametype=CREATE cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 
+type=PATH msg=audit(02/06/2023 13:26:57.450:35204) : item=2 name=ModifyMe.txt inode=806202 dev=08:01 mode=file,664 ouid=izy ogid=izy rdev=00:00 nametype=DELETE cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 
+type=PATH msg=audit(02/06/2023 13:26:57.450:35204) : item=1 name=/home/izy/Documents/testing inode=806192 dev=08:01 mode=dir,775 ouid=izy ogid=izy rdev=00:00 nametype=PARENT cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 
+type=PATH msg=audit(02/06/2023 13:26:57.450:35204) : item=0 name=/home/izy/Documents/testing inode=806192 dev=08:01 mode=dir,775 ouid=izy ogid=izy rdev=00:00 nametype=PARENT cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 
+type=CWD msg=audit(02/06/2023 13:26:57.450:35204) : cwd=/home/izy/Documents/testing 
+type=SYSCALL msg=audit(02/06/2023 13:26:57.450:35204) : arch=x86_64 syscall=rename success=yes exit=0 a0=0x55e523765660 a1=0x55e523957700 a2=0xfffffffffffffeb8 a3=0x0 items=4 ppid=8720 pid=33741 auid=unset uid=izy gid=izy euid=izy suid=izy fsuid=izy egid=izy sgid=izy fsgid=izy tty=pts19 ses=unset comm=vim exe=/usr/bin/vim.basic key=File_test
+type=PROCTITLE msg=audit(02/06/2023 13:26:57.450:35205) : proctitle=vim ModifyMe.txt 
+type=PATH msg=audit(02/06/2023 13:26:57.450:35205) : item=1 name=ModifyMe.txt inode=808111 dev=08:01 mode=file,664 ouid=izy ogid=izy rdev=00:00 nametype=CREATE cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 
+type=PATH msg=audit(02/06/2023 13:26:57.450:35205) : item=0 name=/home/izy/Documents/testing inode=806192 dev=08:01 mode=dir,775 ouid=izy ogid=izy rdev=00:00 nametype=PARENT cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 
+type=CWD msg=audit(02/06/2023 13:26:57.450:35205) : cwd=/home/izy/Documents/testing 
+type=SYSCALL msg=audit(02/06/2023 13:26:57.450:35205) : arch=x86_64 syscall=open success=yes exit=3 a0=0x55e523765660 a1=O_WRONLY|O_CREAT|O_TRUNC a2=0664 a3=0x0 items=2 ppid=8720 pid=33741 auid=unset uid=izy gid=izy euid=izy suid=izy fsuid=izy egid=izy sgid=izy fsgid=izy tty=pts19 ses=unset comm=vim exe=/usr/bin/vim.basic key=File_test
+type=PROCTITLE msg=audit(02/06/2023 13:26:57.458:35206) : proctitle=vim ModifyMe.txt 
+type=PATH msg=audit(02/06/2023 13:26:57.458:35206) : item=0 name=ModifyMe.txt inode=808111 dev=08:01 mode=file,664 ouid=izy ogid=izy rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 
+type=CWD msg=audit(02/06/2023 13:26:57.458:35206) : cwd=/home/izy/Documents/testing 
+type=SYSCALL msg=audit(02/06/2023 13:26:57.458:35206) : arch=x86_64 syscall=chmod success=yes exit=0 a0=0x55e523765660 a1=0664 a2=0x7ffc13d483b0 a3=0x55e5239656c0 items=1 ppid=8720 pid=33741 auid=unset uid=izy gid=izy euid=izy suid=izy fsuid=izy egid=izy sgid=izy fsgid=izy tty=pts19 ses=unset comm=vim exe=/usr/bin/vim.basic key=File_test
+type=PROCTITLE msg=audit(02/06/2023 13:26:57.458:35207) : proctitle=vim ModifyMe.txt 
+type=PATH msg=audit(02/06/2023 13:26:57.458:35207) : item=0 name=ModifyMe.txt inode=808111 dev=08:01 mode=file,664 ouid=izy ogid=izy rdev=00:00 nametype=NORMAL cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 
+type=CWD msg=audit(02/06/2023 13:26:57.458:35207) : cwd=/home/izy/Documents/testing 
+type=SYSCALL msg=audit(02/06/2023 13:26:57.458:35207) : arch=x86_64 syscall=setxattr success=yes exit=0 a0=0x55e523765660 a1=0x7f8af426bb8f a2=0x55e523957720 a3=0x1c items=1 ppid=8720 pid=33741 auid=unset uid=izy gid=izy euid=izy suid=izy fsuid=izy egid=izy sgid=izy fsgid=izy tty=pts19 ses=unset comm=vim exe=/usr/bin/vim.basic key=File_test
+type=PROCTITLE msg=audit(02/06/2023 13:26:57.458:35208) : proctitle=vim ModifyMe.txt 
+type=PATH msg=audit(02/06/2023 13:26:57.458:35208) : item=1 name=ModifyMe.txt~ inode=806202 dev=08:01 mode=file,664 ouid=izy ogid=izy rdev=00:00 nametype=DELETE cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 
+type=PATH msg=audit(02/06/2023 13:26:57.458:35208) : item=0 name=/home/izy/Documents/testing inode=806192 dev=08:01 mode=dir,775 ouid=izy ogid=izy rdev=00:00 nametype=PARENT cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 
+type=CWD msg=audit(02/06/2023 13:26:57.458:35208) : cwd=/home/izy/Documents/testing 
+type=SYSCALL msg=audit(02/06/2023 13:26:57.458:35208) : arch=x86_64 syscall=unlink success=yes exit=0 a0=0x55e523957700 a1=0x55e523781d30 a2=0x55e52326ead5 a3=0x1e items=2 ppid=8720 pid=33741 auid=unset uid=izy gid=izy euid=izy suid=izy fsuid=izy egid=izy sgid=izy fsgid=izy tty=pts19 ses=unset comm=vim exe=/usr/bin/vim.basic key=File_test
+type=PROCTITLE msg=audit(02/06/2023 13:26:57.466:35209) : proctitle=vim ModifyMe.txt 
+type=PATH msg=audit(02/06/2023 13:26:57.466:35209) : item=1 name=/home/izy/Documents/testing/.ModifyMe.txt.swp inode=807372 dev=08:01 mode=file,644 ouid=izy ogid=izy rdev=00:00 nametype=DELETE cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 
+type=PATH msg=audit(02/06/2023 13:26:57.466:35209) : item=0 name=/home/izy/Documents/testing/ inode=806192 dev=08:01 mode=dir,775 ouid=izy ogid=izy rdev=00:00 nametype=PARENT cap_fp=none cap_fi=none cap_fe=0 cap_fver=0 
+type=CWD msg=audit(02/06/2023 13:26:57.466:35209) : cwd=/home/izy/Documents/testing 
+type=SYSCALL msg=audit(02/06/2023 13:26:57.466:35209) : arch=x86_64 syscall=unlink success=yes exit=0 a0=0x55e523955540 a1=0x1 a2=0x14 a3=0x7ffc13d485d0 items=2 ppid=8720 pid=33741 auid=unset uid=izy gid=izy euid=izy suid=izy fsuid=izy egid=izy sgid=izy fsgid=izy tty=pts19 ses=unset comm=vim exe=/usr/bin/vim.basic key=File_test
